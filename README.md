@@ -26,7 +26,11 @@ A simple utility for graphing on the commandline
      cd ttygraph
      make
 
-`ttygraph` requires `ncurses`
+And optionally (installs to `~/.local/bin`):
+
+     make install
+
+Note:  `ttygraph` requires `ncurses`
 
 ## See Also
 

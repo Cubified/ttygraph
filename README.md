@@ -6,11 +6,19 @@ A simple utility for graphing on the commandline
 
      ttygraph [righthand of func]
 
-Examples:
+### Examples:
 
      ttygraph "x"
      ttygraph "x*x"
      ttygraph "2*sin(x)"
+
+### Screenshots:
+
+![linear](https://github.com/Cubified/ttygraph/blob/master/screenshots/linear.png)
+
+![parabola](https://github.com/Cubified/ttygraph/blob/master/screenshots/parabola.png)
+
+![sine](https://github.com/Cubified/ttygraph/blob/master/screenshots/sine.png)
 
 ## Compilation
 
@@ -18,4 +26,8 @@ Examples:
      cd ttygraph
      make
 
-`ttygraph` requires `ncurses`.
+`ttygraph` requires `ncurses`
+
+## See Also
+
+[tinyexpr](https://github.com/codeplea/tinyexpr) - does the brunt of the work

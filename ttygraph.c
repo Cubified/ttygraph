@@ -36,13 +36,17 @@ void draw_point(int x, int y){
   refresh();
 }
 
+void print_info(char *func){
+  mvprintw(0,0,"Graph of y=%s\nPress any key to exit",func);
+}
+
 te_expr *parse_func(char *arg, double *x){
   te_variable vars[] = {{"x",x}};
 
   int err;
 
-  char *flip = malloc(strlen(arg)+1);
-  sprintf(flip,"-%s",arg);
+  char *flip = malloc(strlen(arg)+3);
+  sprintf(flip,"-(%s)",arg);
 
   te_expr *expr = te_compile(flip,vars,1,&err);
 
@@ -75,6 +79,9 @@ int main(int argc, char *argv[]){
     for(x=-(col/2);x<(col/2);x+=1.0){
       draw_point(x+(col/2),te_eval(expr)+(row/2));
     }
+
+    attron(COLOR_PAIR(2));
+    print_info(argv[1]);
 
     shutdown_ncurses();
   } else {

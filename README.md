@@ -18,4 +18,4 @@ Examples:
      cd ttygraph
      make
 
-`ttygraph` requires `ncurses`
+`ttygraph` requires `ncurses`.

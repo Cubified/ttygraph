@@ -10,7 +10,7 @@ Examples:
 
      ttygraph "x"
      ttygraph "x*x"
-     ttygraph "10sin(x)"
+     ttygraph "2*sin(x)"
 
 ## Compilation
 
